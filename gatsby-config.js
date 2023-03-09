@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     siteTitle: '不要不开心',
     siteUrl: 'https://kkxx.cmds.run',
-    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
+    logo: 'https://img.onmicrosoft.cn/kkxx/avatar.jpg',
     description: 'Running For Happy.',
     navLinks: [
       {
