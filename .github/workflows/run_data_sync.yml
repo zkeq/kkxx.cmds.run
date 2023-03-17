@@ -131,6 +131,8 @@ jobs:
 
       - name: Genfile Git Commit
         run: |
+          git config --local user.email "admin@icodeq.com"
+          git config --local user.name "Zkeq"
           git add .
           git commit -m "GitHub Actions MAKE README.md at $(date +'%Y-%m-%d %H:%M:%S')"
 
