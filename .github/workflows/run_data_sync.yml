@@ -126,3 +126,14 @@ jobs:
             publish_dir: .
             force_orphan: true
             # keep_files: true
+
+      - name: Genfile Git Commit
+        run: |
+          git add .
+          git commit -m "GitHub Actions MAKE README.md at $(date +'%Y-%m-%d %H:%M:%S')"
+
+      - name: Push changes
+        uses:  ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.MY_GIT_TOKEN }}
+          branch: master
