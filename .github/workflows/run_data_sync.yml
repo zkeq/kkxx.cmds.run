@@ -133,11 +133,20 @@ jobs:
       #    github_token: ${{ secrets.MY_GIT_TOKEN }}
       #    branch: master
           
-      - name: Deploy site
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-            github_token: ${{ secrets.MY_GIT_TOKEN }}
-            publish_branch: vercel-pages
-            publish_dir: .
-            force_orphan: true
-            # keep_files: true
+      #- name: Deploy site
+      #  uses: peaceiris/actions-gh-pages@v3
+      #  with:
+      #      github_token: ${{ secrets.MY_GIT_TOKEN }}
+      #      publish_branch: vercel-pages
+      #      publish_dir: .
+      #      force_orphan: true
+      #      # keep_files: true
+      
+      - name: Push new runs
+        run: |
+          git config --local user.email "admin@icodeq.com"
+          git config --local user.name "Zkeq"
+          git remote set-url origin https://zkeq:${{ secrets.MY_GIT_TOKEN }}@github.com/zkeq/kkxx.cmds.run.git
+          git add .
+          git commit -m 'update new runs' || echo "nothing to commit"
+          git push || echo "nothing to push"
