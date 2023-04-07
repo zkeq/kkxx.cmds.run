@@ -195,7 +195,7 @@ const getBoundsForGeoData = (geoData) => {
   if ( geoData.features.length === 1 && geoData.features[0].geometry.coordinates.length ){
     zoom = zoom
   } else{
-    zoom += 3;
+    zoom += 2.4;
   }
   return { longitude, latitude, zoom };
 };
