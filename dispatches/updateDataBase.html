@@ -126,7 +126,7 @@
                     
                         <el-input
                             type="textarea"
-                            :rows="8"
+                            :rows="16"
                             v-model="loggerArea"
                             :readonly="true"
                             id="logger"
@@ -237,6 +237,8 @@
                             this.addLogger("x-ratelimit-remaining: " + response.headers["x-ratelimit-remaining"]);
                             this.addLogger("x-ratelimit-reset: " + response.headers["x-ratelimit-reset"]);
                             this.addLogger("x-ratelimit-used: " + response.headers["x-ratelimit-used"]);
+                            // 更新成功,请稍后查看
+                            this.addLogger("更新成功,请稍后查看");
                         }
                     })
                     .catch(error => {
