@@ -142,7 +142,7 @@
 
     </div>
     <script>
-        let CONFIG_GITHUB_REPO = "https://api.github.com/repos/zkeq/kkxx.cmds.run/dispatches"
+        let CONFIG_GITHUB_REPO = "https://api.github.com/repos/icodel/Runner/dispatches"
 
         var Main = {
             data() {
@@ -183,7 +183,7 @@
                     // 保存Token
                     this.addLogger("开始保存 Token: " + this.formInline.token);
                     // formInline.token to localStorage
-                    localStorage.setItem("token_kkxx", this.formInline.token);
+                    localStorage.setItem("token", this.formInline.token);
 
                     this.addLogger("保存 Token 成功");
                 },
@@ -192,7 +192,7 @@
                     this.addLogger("初始化 REPO API:\n" + CONFIG_GITHUB_REPO);
 
                     // 从localStorage中获取Token
-                    _ = localStorage.getItem("token_kkxx");
+                    _ = localStorage.getItem("token");
                     if(_ != null){
                         this.formInline.token = _;
                         this.addLogger("获取 Token 成功: " + this.formInline.token);
@@ -240,7 +240,11 @@
                         }
                     })
                     .catch(error => {
-                        console.log(error);
+                        this.addLogger("更新事件失败: " + eventName);
+                        this.addLogger("Status Code: " + response.status);
+                        this.addLogger("x-github-request-id: " + response.headers["x-github-request-id"]);
+                        // data
+                        this.addLogger(error.response.data);
                     });
                     
                 }
