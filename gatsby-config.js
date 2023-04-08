@@ -8,7 +8,7 @@ module.exports = {
     navLinks: [
       {
         name: '更新数据',
-        url: "https://raw.cmds.run/icodel/Runner/master/dispatches/updateDataBase.html"
+        url: "https://raw.cmds.run/zkeq/kkxx.cmds.run/master/dispatches/updateDataBase.html"
       }
     ],
   },
