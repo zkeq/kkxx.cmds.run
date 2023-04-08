@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
+  repository_dispatch:
+    types:
+      - updateDataBase
 
 env:
   # please change to your own config.

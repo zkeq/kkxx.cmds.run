@@ -7,8 +7,8 @@ module.exports = {
     description: 'Running For Happy.',
     navLinks: [
       {
-        name: 'Zkeq',
-        url: 'https://icodeq.com',
+        name: '更新数据',
+        url: "https://raw.cmds.run/icodel/Runner/master/dispatches/updateDataBase.html"
       }
     ],
   },
