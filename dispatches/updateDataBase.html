@@ -187,7 +187,7 @@
                     // 保存Token
                     this.addLogger("开始保存 Token: " + this.formInline.token);
                     // formInline.token to localStorage
-                    localStorage.setItem("token", this.formInline.token);
+                    localStorage.setItem("token_KKXX", this.formInline.token);
 
                     this.addLogger("保存 Token 成功");
                 },
@@ -196,7 +196,7 @@
                     this.addLogger("初始化 REPO API:\n" + CONFIG_GITHUB_REPO);
 
                     // 从localStorage中获取Token
-                    _ = localStorage.getItem("token");
+                    _ = localStorage.getItem("token_KKXX");
                     if(_ != null){
                         this.formInline.token = _;
                         this.addLogger("获取 Token 成功: " + this.formInline.token);
