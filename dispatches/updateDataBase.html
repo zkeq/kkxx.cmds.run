@@ -241,10 +241,10 @@
                     })
                     .catch(error => {
                         this.addLogger("更新事件失败: " + eventName);
-                        this.addLogger("Status Code: " + response.status);
-                        this.addLogger("x-github-request-id: " + response.headers["x-github-request-id"]);
+                        this.addLogger("Status Code: " + error.response.status);
+                        this.addLogger("x-github-request-id: " + error.response.headers["x-github-request-id"]);
                         // data
-                        this.addLogger(error.response.data);
+                        this.addLogger(JSON.stringify(error.response.data));
                     });
                     
                 }
