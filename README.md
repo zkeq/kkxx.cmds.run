@@ -1,5 +1,18 @@
-## 注：如果是之前 clone 或 Fork 的朋友 vercel 显示 404 可能需要更新下代码
+```markdown
+1. 删掉 GPX_OUT 里面的文件
+2. 删掉 scripts/data.db
+3. 改 gatsby-config.js 里面的站点配置
+4. 改 .github/workflows/run_data_sync.yml 里面的配置 12-19 149-155
+5. 若使用KEEP 添加 KEEP_MOBILE KEEP_PASSWORD MY_GIT_TOKEN 三个环境变量
+第三个 MY_GIT_TOKEN 需要去自己生成一个 勾选 repo 权限
 
+然后点击 Actions 运行 测试不报错即可
+
+进阶: 改 dispatches/updateDataBase.html 第 203 行 改成你的 repo 地址
+
+然后点击 RAW 生成之后 在 https://cdn.cmds.run 得到一个加速地址
+可直接访问的 然后就可以进行手动更新
+```
 
 <p align="center">
   <img width="150" src="https://raw.githubusercontent.com/shaonianche/gallery/master/running_page/running_page_logo.png" />
