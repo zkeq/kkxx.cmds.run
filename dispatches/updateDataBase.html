@@ -316,9 +316,9 @@
                     this.addLogger("Fetching: " + "/actions/runs");
                     axios.get(CONFIG_GITHUB_REPO + "/actions/runs" + "?_=" + new Date().getTime(),
                     {
-                        headers: {
-                            'Authorization': 'token ' + this.formInline.token
-                        }
+                        headers: this.formInline.token? {
+                            'Authorization':  'token ' + this.formInline.token
+                        }:{}
                     })
                         .then(response => {
                             workflow_runs = response.data.workflow_runs;
@@ -347,9 +347,9 @@
                     this.addLogger("Fetching: " + "/actions/runs/" + runs_id + "/jobs")
                     axios.get(CONFIG_GITHUB_REPO + "/actions/runs/" + runs_id + "/jobs" + "?_=" + new Date().getTime(),
                     {
-                        headers: {
-                            'Authorization': 'token ' + this.formInline.token
-                        }
+                        headers: this.formInline.token? {
+                            'Authorization':  'token ' + this.formInline.token
+                        }:{}
                     }) 
                         .then(response => {
                             this.addLogger("获取单个 ActionsTable 列表成功");
