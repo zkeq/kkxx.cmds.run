@@ -128,14 +128,14 @@
 
                     <el-divider>站点工作日志</el-divider>
 
-                    <el-input type="textarea" :rows="12" v-model="loggerArea" :readonly="true" id="logger">
+                    <el-input type="textarea" :rows="12" v-model="loggerArea" :readonly="true" id="logger" size="mini">
                     </el-input>
 
 
                     <el-divider>Github Actions 运行列表</el-divider>
 
 
-                    <el-table :data="actionsTableData" height="250" border style="width: 100%">
+                    <el-table :data="actionsTableData" height="250" border style="width: 100%" size="mini">
                         <el-table-column prop="id" align="center" label="ID" width="180">
                         </el-table-column>
                         <el-table-column prop="display_title" align="center" label="工作流" width="180">
@@ -159,7 +159,7 @@
                     </el-table>
                    
                     <el-divider>最新的一个 Actions 的 工作详情</el-divider>
-                    <el-table :data="singleActionsTableData" height="480" border style="width: 100%">
+                    <el-table :data="singleActionsTableData" height="480" border style="width: 100%" size="mini">
                         <el-table-column prop="number" align="center" label="ID" width="140">
                         </el-table-column>
                         <el-table-column prop="name" align="center" label="Job Name" width="240">
